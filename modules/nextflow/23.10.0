@@ -1,0 +1,23 @@
+#%Module1.0
+##
+##
+
+
+module-whatis "module sets up nextflow 23.10.0"
+
+proc ModulesHelp { } {
+puts stderr "module sets up nextflow 23.10.0"
+}
+
+prepend-path PATH /cluster/tufts/biocontainers/tools/nextflow/23.10.0
+
+conflict nextflow
+
+set additional_prereqs {"java/15.0.2"}
+if {[module-info mode "load"]} {
+  foreach a_module $additional_prereqs {
+    if {![is-loaded $a_module]} {
+      module load $a_module
+    }
+  }
+}

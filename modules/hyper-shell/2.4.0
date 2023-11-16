@@ -1,0 +1,10 @@
+#%Module -*- tcl -*-
+set appname hyper-shell
+set version 2.4.0
+
+module-whatis  "Name: $appname"
+module-whatis "Description: Process shell commands over a distributed, asynchronous queue."
+module-whatis "Version: $version"
+module-whatis "URL: https://github.com/glentner/hyper-shell"
+
+prepend-path PATH "/cluster/tufts/biocontainers/tools/$appname/$version/bin"

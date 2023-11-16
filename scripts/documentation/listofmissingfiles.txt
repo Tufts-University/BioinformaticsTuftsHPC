@@ -1,0 +1,5 @@
+biobakery_workflows
+hyper-shell
+nf-core
+polypolish
+r-scrnaseq-dev
