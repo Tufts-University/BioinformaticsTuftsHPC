@@ -1,18 +1,11 @@
-.. RCAC Biocontainers documentation master file, created by
-   sphinx-quickstart on Wed Mar  2 21:59:37 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-RCAC Biocontainers documentation!
-==============================================
-.. image:: images/biocontainer_cloud.jpg
-   :width: 700px
-   :align: left
+User guide for running bioinformatics analysis on Tufts HPC
+==============================================================
 
 This is the user guide for biocontainer modules deployed in Purdue High Performance Computing clusters. More information about our center is avaiable here (https://www.rcac.purdue.edu).  
 
 If you have any question, contact me(Yucheng Zhang) at: 
-`zhan4429@purdue.edu <mailto:zhan4429@purdue.edu>`_
+`yzhang85@tufts.edu <mailto:yzhang85@tufts.edu>`_
 
 .. warning::
     Do not use both ``bioinfo`` and ``biocontainers`` in your job script, because loading ``bioinfo`` will cause the failure of loading many modules including ``biocontainers`` in ``Brown``, ``Halstead``, ``Scholar``, ``Workbench``, and ``Gilbreth``. Since RCAC will not provide support to ``bioinfo`` in the future clusters, we recommend users to just use ``biocontainers``. 
