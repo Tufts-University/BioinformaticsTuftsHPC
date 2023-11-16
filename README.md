@@ -1,2 +1,3 @@
-# BioinformaticsTuftsHPC
-User guide for running bioinformatics analysis on Tufts Cluster
+# Containerized bioinformatics applications on Tufts HPC
+
+
