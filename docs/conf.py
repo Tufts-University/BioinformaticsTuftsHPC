@@ -22,9 +22,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Containers@TACC'
-copyright = '2023, Texas Advanced Computing Center'
-author = 'Texas Advanced Computing Center'
+project = 'Tufts HPC Bioinformatics'
+copyright = '2023, Tufts University'
+author = 'Tufts Research Technology'
 
 # The short X.Y version
 version = ''
@@ -74,7 +74,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = None
 
 # TACC logo
-html_logo = 'images/TACC-White-No-Mask.png'
+html_logo = 'images/Tufts_univ_white.png'
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -109,7 +109,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ContainersTACCdoc'
+htmlhelp_basename = 'Tufts HPC Bioinformatics'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -132,35 +132,6 @@ latex_elements = {
     # 'figure_align': 'htbp',
 }
 
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'ContainersTACC.tex', 'Containers@TACC Documentation',
-     'Texas Advanced Computing Center', 'manual'),
-]
-
-
-# -- Options for manual page output ------------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'containerstacc', 'Containers@TACC Documentation',
-     [author], 1)
-]
-
-
-# -- Options for Texinfo output ----------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'ContainersTACC', 'Containers@TACC Documentation',
-     author, 'ContainersTACC', 'One line description of project.',
-     'Miscellaneous'),
-]
 
 
 # -- Options for Epub output -------------------------------------------------
