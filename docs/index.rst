@@ -2,10 +2,9 @@
 User guide for running bioinformatics analysis on Tufts HPC
 ==============================================================
 
-This is the user guide for running  bioinformatics analysis on Tufts Performance Computing clusters. More information about our center is avaiable here (https://it.tufts.edu/high-performance-computing/hpc-welcome-page).
-If you have any question, contact me(Yucheng Zhang) at: 
-`yzhang85@tufts.edu <mailto:yzhang85@tufts.edu>`_
+This is the user guide for running  bioinformatics analysis on `Tufts High Performance Computing clusters <https://it.tufts.edu/high-performance-computing/hpc-welcome-page>_`.
 
+If you have any question, contact me (`Yucheng Zhang <mailto:yzhang85@tufts.edu>`_). 
 
 .. toctree::
    :caption: Frequently Asked Questions
