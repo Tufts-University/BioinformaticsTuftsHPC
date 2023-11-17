@@ -1,13 +1,16 @@
 .. _backbone-label:
 
-HISAT2
+Hisat2
 ==============================
 
 Introduction
 ~~~~~~~~
-``HISAT2`` is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes as well as to a single reference genome. 
+HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes as well as to a single reference genome.
 
-| For more information, please check its website: https://biocontainers.pro/tools/hisat2 and its home page on `Github`_.
+
+| For more information, please check:
+| BioContainers: https://biocontainers.pro/tools/hisat2 
+| Home page: https://daehwankimlab.github.io/hisat2/
 
 Versions
 ~~~~~~~~
@@ -36,7 +39,7 @@ Commands
 Module
 ~~~~~~~~
 You can load the modules by::
-    
+
     module load biocontainers
     module load hisat2
 
@@ -45,10 +48,10 @@ Example job
 .. warning::
     Using ``#!/bin/sh -l`` as shebang in the slurm job script will cause the failure of some biocontainer modules. Please use ``#!/bin/bash`` instead.
 
-To run HISAT2 on our clusters::
+To run hisat2 on our clusters::
 
     #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name 
+    #SBATCH -A myallocation     # Allocation name
     #SBATCH -t 1:00:00
     #SBATCH -N 1
     #SBATCH -n 1
@@ -59,13 +62,3 @@ To run HISAT2 on our clusters::
 
     module --force purge
     ml biocontainers hisat2
-    
-    hisat2-build genome.fa genome
-    
-    # for single-end FASTA reads DNA alignment
-    hisat2 -f -x genome -U reads.fa -S output.sam --no-spliced-alignment
-
-    # for paired-end FASTQ reads alignment
-    hisat2 -x genome -1 reads_1.fq -2 read2_2.fq -S output.sam
-
-.. _Github: https://github.com/hahnlab/hisat2

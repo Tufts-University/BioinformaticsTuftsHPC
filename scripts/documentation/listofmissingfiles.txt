@@ -1,5 +1,7 @@
-biobakery_workflows
 hyper-shell
+listofmissingfiles.txt
+nextflow
 nf-core
-polypolish
+r-scrnaseq
 r-scrnaseq-dev
+.rst

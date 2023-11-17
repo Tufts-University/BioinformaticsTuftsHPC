@@ -5,9 +5,12 @@ Plink
 
 Introduction
 ~~~~~~~~
-``Plink`` is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
+Plink is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.
 
-| For more information, please check its website: https://biocontainers.pro/tools/plink and its home page: https://zzz.bwh.harvard.edu/plink/.
+
+| For more information, please check:
+| BioContainers: https://biocontainers.pro/tools/plink 
+| Home page: https://zzz.bwh.harvard.edu/plink/
 
 Versions
 ~~~~~~~~
@@ -21,7 +24,7 @@ Commands
 Module
 ~~~~~~~~
 You can load the modules by::
-    
+
     module load biocontainers
     module load plink
 
@@ -30,10 +33,10 @@ Example job
 .. warning::
     Using ``#!/bin/sh -l`` as shebang in the slurm job script will cause the failure of some biocontainer modules. Please use ``#!/bin/bash`` instead.
 
-To run Plink on our clusters::
+To run plink on our clusters::
 
     #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name 
+    #SBATCH -A myallocation     # Allocation name
     #SBATCH -t 1:00:00
     #SBATCH -N 1
     #SBATCH -n 1
@@ -44,5 +47,3 @@ To run Plink on our clusters::
 
     module --force purge
     ml biocontainers plink
-
-    plink --file toy --freq --out toy_analysis

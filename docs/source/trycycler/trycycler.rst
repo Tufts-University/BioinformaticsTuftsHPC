@@ -48,8 +48,3 @@ To run trycycler on our clusters::
 
     module --force purge
     ml biocontainers trycycler
-
-    trycycler cluster --assemblies \
-        test/test_cluster/assembly_*.fasta \
-        --read test/test_cluster/reads.fastq \
-        --out_dir trycycler_out

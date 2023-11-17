@@ -21,7 +21,7 @@ for filename in ${listofmissingfiles[@]}; do
    inputfolder="$repo_path/module_files/$filename/"
    echo "input folder: "$inputfolder
 
-   filenamesarray=`ls $inputfolder*`
+   filenamesarray=`ls $inputfolder*.lua`
    for eachfile in $filenamesarray
    do
       inputpath=$eachfile #This assumes last file name in alphabetical order is the file to parse
@@ -45,17 +45,16 @@ for filename in ${listofmissingfiles[@]}; do
    echo "" >> $outputfile
    echo "Introduction" >> $outputfile
    echo "~~~~~~~~" >> $outputfile
-#   description=$(echo $inputpathcontent | sed -e 's/Description/\nDescription\n/' -e 's/More information/\nMore information\n/' | sed -n '/Description/,/More information/{//!p}')
-   description=$(echo $inputpathcontent | grep "module-whatis" | grep "Description" | sed "s/module-whatis//g | awk '{$1=$1};1'")
-#   description=$(echo $description | sed 's/=//g')
+   description=$(echo $inputpathcontent | sed -e 's/Description/\nDescription\n/' -e 's/More information/\nMore information\n/' | sed -n '/Description/,/More information/{//!p}')
+   description=$(echo $description | sed 's/=//g')
    echo $description >> $outputfile
-   echo "\n" >> $outputfile
    echo "" >> $outputfile
-#   echo "| For more information, please check:" >> $outputfile
-#   moreinformation=$(echo $inputpathcontent | sed -e 's/More information/\nMore information\n/' -e 's/]==])/\n]==])\n/' | sed -n '/More information/,/]==])/{//!p}')
-#   moreinformation=$(echo $moreinformation | sed 's/=//g')
-#   moreinformation=$(echo $moreinformation | sed 's/-//')
-#   echo "|" $moreinformation | sed 's/- /\n| /g' >> $outputfile
+   echo "" >> $outputfile
+   echo "| For more information, please check:" >> $outputfile
+   moreinformation=$(echo $inputpathcontent | sed -e 's/More information/\nMore information\n/' -e 's/]==])/\n]==])\n/' | sed -n '/More information/,/]==])/{//!p}')
+   moreinformation=$(echo $moreinformation | sed 's/=//g')
+   moreinformation=$(echo $moreinformation | sed 's/-//')
+   echo "|" $moreinformation | sed 's/- /\n| /g' >> $outputfile
    echo "" >> $outputfile
    echo "Versions" >> $outputfile
    echo "~~~~~~~~" >> $outputfile
@@ -91,11 +90,24 @@ for filename in ${listofmissingfiles[@]}; do
    echo "" >> $outputfile
    echo "To run $containername on our clusters::" >> $outputfile
    echo "" >> $outputfile
-   echo -e "    #!/bin/bash\n    #SBATCH -p PartitionName     # batch, gpu, preempt, mpi or your group's own partition\n    #SBATCH -t 1:00:00\n    #SBATCH -N 1\n    #SBATCH -n 1\n #SBATCH -c 4\n #SBATCH --mem=8G \n   #SBATCH --job-name=$containername\n    #SBATCH --mail-type=FAIL,BEGIN,END\n    #SBATCH --error=%x-%J-%u.err\n    #SBATCH --output=%x-%J-%u.out" >> $outputfile
-   echo "" >> $outputfile
-   echo "    module purge" >> $outputfile
-   echo "    module load $containername/XXXX ### you can run *module avail $containername* to check all available versions" >> $outputfile
-   echo "" >> $outputfile
+cat <<EOF >>$outputfile
+#!/bin/bash
+#SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
+#SBATCH -t 1:00:00
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH --mem=8G
+#SBATCH --job-name=$containername
+#SBATCH --mail-type=FAIL,BEGIN,END
+#SBATCH --error=%x-%J-%u.err
+#SBATCH --output=%x-%J-%u.out
+
+module purge
+module load $containername/XXXX ### you can run *module avail $containername* to check all available versions
+
+EOF
+
 done
 
 # Update index.rst using names of files in source folder

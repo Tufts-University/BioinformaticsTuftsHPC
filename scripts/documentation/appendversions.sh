@@ -8,10 +8,11 @@
 current_dir="$PWD" # save current directory 
 cd ../../ # go up two directories
 repo_path="$PWD" # assign path to repo_path
-cd $current_dir # cd back to current directory
 
 sourcefolder="$repo_path/docs/source/"
 containernamesarray=`ls $sourcefolder`
+
+cd $current_dir 
 
 for containername in $containernamesarray
 do
@@ -20,7 +21,7 @@ do
 
     outputfile="$sourcefolder$containername/$containername.rst"
     echo "~~~~~~~~" > tempfile.rst
-    filenamesarray=`ls $inputfolder*`
+    filenamesarray=`ls $inputfolder*.lua`
 
     for eachfile in $filenamesarray
     do

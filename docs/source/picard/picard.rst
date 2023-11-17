@@ -1,12 +1,16 @@
-.. _backbone-label:  
+.. _backbone-label:
 
-Picard Tools
-============================== 
+Picard
+==============================
 
 Introduction
-~~~~~~~
-``Picard`` is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF. 
-Detailed usage can be found here: https://broadinstitute.github.io/picard/
+~~~~~~~~
+Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.
+
+
+| For more information, please check:
+| BioContainers: https://biocontainers.pro/tools/picard 
+| Home page: https://broadinstitute.github.io/picard/
 
 Versions
 ~~~~~~~~
@@ -14,36 +18,32 @@ Versions
 - 2.26.10
 
 Commands
-~~~~~~
-picard
+~~~~~~~
+- picard
 
 Module
-~~~~~~~
+~~~~~~~~
 You can load the modules by::
 
     module load biocontainers
-    module load picard/2.26.10 
+    module load picard
 
 Example job
-~~~~~~
+~~~~~
 .. warning::
     Using ``#!/bin/sh -l`` as shebang in the slurm job script will cause the failure of some biocontainer modules. Please use ``#!/bin/bash`` instead.
 
-To run picard our our clusters::
+To run picard on our clusters::
 
     #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name 
-    #SBATCH -t 20:00:00
+    #SBATCH -A myallocation     # Allocation name
+    #SBATCH -t 1:00:00
     #SBATCH -N 1
-    #SBATCH -n 24
+    #SBATCH -n 1
     #SBATCH --job-name=picard
     #SBATCH --mail-type=FAIL,BEGIN,END
     #SBATCH --error=%x-%J-%u.err
     #SBATCH --output=%x-%J-%u.out
 
     module --force purge
-    ml biocontainers picard/2.26.10 
-    
-    picard MarkDuplicates -Xmx64g I=19P0126636WES_sorted.bam O=19P0126636WES_sorted_md.bam M=19P0126636WES.sorted.markdup.txt REMOVE_DUPLICATES=true
-    picard BuildBamIndex -Xmx64g I=19P0126636WES_sorted_md.bam
-    picard CreateSequenceDictionary -R hg38.fa -O hg38.dict
+    ml biocontainers picard

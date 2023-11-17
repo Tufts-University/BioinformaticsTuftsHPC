@@ -27,7 +27,7 @@ for containername in $containernamesarray
 do
     inputfolder="$sourcefolder$containername/"
     tempvariable=0
-    filenamesarray=`ls $inputfolder*`
+    filenamesarray=`ls $inputfolder*.lua`
     for eachfile in $filenamesarray
     do
         inputpath=$eachfile

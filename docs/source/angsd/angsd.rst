@@ -1,21 +1,23 @@
-.. _backbone-label:  
+.. _backbone-label:
 
-ANGSD
-============================== 
+Angsd
+==============================
 
 Introduction
-~~~~~~~
-``ANGSD`` is a software for analyzing next generation sequencing data. Detailed usage can be found here: http://www.popgen.dk/angsd/index.php/ANGSD. 
+~~~~~~~~
+Angsd is a software for analyzing next generation sequencing data.
+
+
+| For more information, please check:
+| Home page: http://www.popgen.dk/angsd/index.php/ANGSD
 
 Versions
 ~~~~~~~~
-- 0.935
-- 0.937
 - 0.939
 - 0.940
 
 Commands
-~~~~~~
+~~~~~~~
 - angsd
 - realSFS
 - msToGlf
@@ -23,30 +25,28 @@ Commands
 - supersim
 
 Module
-~~~~~~~
+~~~~~~~~
 You can load the modules by::
 
     module load biocontainers
-    module load angsd/0.937
+    module load angsd
 
 Example job
-~~~~~~
+~~~~~
 .. warning::
     Using ``#!/bin/sh -l`` as shebang in the slurm job script will cause the failure of some biocontainer modules. Please use ``#!/bin/bash`` instead.
 
-To run angsd on our our clusters::
+To run angsd on our clusters::
 
     #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name 
-    #SBATCH -t 20:00:00
+    #SBATCH -A myallocation     # Allocation name
+    #SBATCH -t 1:00:00
     #SBATCH -N 1
-    #SBATCH -n 24
+    #SBATCH -n 1
     #SBATCH --job-name=angsd
     #SBATCH --mail-type=FAIL,BEGIN,END
     #SBATCH --error=%x-%J-%u.err
     #SBATCH --output=%x-%J-%u.out
 
     module --force purge
-    ml biocontainers angsd/0.937
-    
-    angsd -b bam.filelist -GL 1 -doMajorMinor 1 -doMaf 2 -P 5 -minMapQ 30 -minQ 20 -minMaf 0.05
+    ml biocontainers angsd
