@@ -76,28 +76,6 @@ Example contents of full_db_20231031.ff for multimer::
   --kalign_binary_path=/usr/bin/kalign
 
 
-Example job
-~~~~~
-.. warning::
-    Using ``#!/bin/sh -l`` as shebang in the slurm job script will cause the failure of some biocontainer modules. Please use ``#!/bin/bash`` instead.
-
-To run alphafold on our clusters::
-
- #!/bin/bash
- #SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
- #SBATCH -t 1:00:00
- #SBATCH -N 1
- #SBATCH -n 1
- #SBATCH -c 4
- #SBATCH --mem=8G
- #SBATCH --job-name=alphafold
- #SBATCH --mail-type=FAIL,BEGIN,END
- #SBATCH --error=%x-%J-%u.err
- #SBATCH --output=%x-%J-%u.out
-
- module purge
- module load alphafold/XXXX ### you can run *module avail alphafold* to check all available versions
-
 Example job using CPU
 ~~~~~~~~
 .. warning::
@@ -155,3 +133,10 @@ To run alphafold using GPU::
         --fasta_paths=sample.fasta --max_template_date=2022-02-01 \
         --output_dir=af2_full_out --model_preset=monomer \
         --use_gpu_relax=True
+
+
+
+
+
+
+.. _Github: https://github.com/deepmind/alphafold/
