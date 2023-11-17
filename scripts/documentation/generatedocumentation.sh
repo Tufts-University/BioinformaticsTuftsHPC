@@ -76,13 +76,6 @@ for filename in ${listofmissingfiles[@]}; do
       echo "$element" | cut -d'"' -f 2 >> $outputfile
    done
    echo "" >> $outputfile
-   echo "Module" >> $outputfile
-   echo "~~~~~~~~" >> $outputfile
-   echo "You can load the modules by::" >> $outputfile
-   echo "" >> $outputfile
-   echo "    module load biocontainers" >> $outputfile
-   echo "    module load $containername" >> $outputfile
-   echo "" >> $outputfile
    echo "Example job" >> $outputfile
    echo "~~~~~" >> $outputfile
    echo ".. warning::" >> $outputfile
@@ -91,20 +84,20 @@ for filename in ${listofmissingfiles[@]}; do
    echo "To run $containername on our clusters::" >> $outputfile
    echo "" >> $outputfile
 cat <<EOF >>$outputfile
-#!/bin/bash
-#SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
-#SBATCH -t 1:00:00
-#SBATCH -N 1
-#SBATCH -n 1
-#SBATCH -c 4
-#SBATCH --mem=8G
-#SBATCH --job-name=$containername
-#SBATCH --mail-type=FAIL,BEGIN,END
-#SBATCH --error=%x-%J-%u.err
-#SBATCH --output=%x-%J-%u.out
+ #!/bin/bash
+ #SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
+ #SBATCH -t 1:00:00
+ #SBATCH -N 1
+ #SBATCH -n 1
+ #SBATCH -c 4
+ #SBATCH --mem=8G
+ #SBATCH --job-name=$containername
+ #SBATCH --mail-type=FAIL,BEGIN,END
+ #SBATCH --error=%x-%J-%u.err
+ #SBATCH --output=%x-%J-%u.out
 
-module purge
-module load $containername/XXXX ### you can run *module avail $containername* to check all available versions
+ module purge
+ module load $containername/XXXX ### you can run *module avail $containername* to check all available versions
 
 EOF
 
