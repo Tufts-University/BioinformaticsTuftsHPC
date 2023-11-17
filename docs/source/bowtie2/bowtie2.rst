@@ -23,13 +23,6 @@ Commands
 - bowtie2-build
 - bowtie2-inspect
 
-Module
-~~~~~~~~
-You can load the modules by::
-
-    module load biocontainers
-    module load bowtie2
-
 Example job
 ~~~~~
 .. warning::
@@ -37,15 +30,17 @@ Example job
 
 To run bowtie2 on our clusters::
 
-    #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name
-    #SBATCH -t 1:00:00
-    #SBATCH -N 1
-    #SBATCH -n 1
-    #SBATCH --job-name=bowtie2
-    #SBATCH --mail-type=FAIL,BEGIN,END
-    #SBATCH --error=%x-%J-%u.err
-    #SBATCH --output=%x-%J-%u.out
+#!/bin/bash
+#SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
+#SBATCH -t 1:00:00
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH --mem=8G
+#SBATCH --job-name=bowtie2
+#SBATCH --mail-type=FAIL,BEGIN,END
+#SBATCH --error=%x-%J-%u.err
+#SBATCH --output=%x-%J-%u.out
 
-    module --force purge
-    ml biocontainers bowtie2
+module purge
+module load bowtie2/XXXX ### you can run *module avail bowtie2* to check all available versions

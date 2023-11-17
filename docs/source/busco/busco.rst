@@ -22,13 +22,6 @@ Commands
 - busco
 - generate_plot.py
 
-Module
-~~~~~~~~
-You can load the modules by::
-
-    module load biocontainers
-    module load busco
-
 Example job
 ~~~~~
 .. warning::
@@ -36,15 +29,17 @@ Example job
 
 To run busco on our clusters::
 
-    #!/bin/bash
-    #SBATCH -A myallocation     # Allocation name
-    #SBATCH -t 1:00:00
-    #SBATCH -N 1
-    #SBATCH -n 1
-    #SBATCH --job-name=busco
-    #SBATCH --mail-type=FAIL,BEGIN,END
-    #SBATCH --error=%x-%J-%u.err
-    #SBATCH --output=%x-%J-%u.out
+#!/bin/bash
+#SBATCH -p PartitionName  # batch, gpu, preempt, mpi or your group's own partition
+#SBATCH -t 1:00:00
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH --mem=8G
+#SBATCH --job-name=busco
+#SBATCH --mail-type=FAIL,BEGIN,END
+#SBATCH --error=%x-%J-%u.err
+#SBATCH --output=%x-%J-%u.out
 
-    module --force purge
-    ml biocontainers busco
+module purge
+module load busco/XXXX ### you can run *module avail busco* to check all available versions
