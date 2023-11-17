@@ -103,14 +103,32 @@ EOF
 
 done
 
-# Update index.rst using names of files in source folder
 
-sourcefolder="$repo_path/docs/source/"
+# Update index.rst using names of files in source folder
+## Update tutorials
+tutorialfolder="$repo_path/docs/tutorials/"
 indexfile="$repo_path/docs/index.rst"
+
+tutorialsarray=`ls $tutorialfolder`
+
+sed -i '/Tutorials/,$d' $indexfile
+echo "   :caption: Tutorials" >> $indexfile
+echo "   :maxdepth: 3" >> $indexfile
+echo "   :titlesonly:" >> $indexfile
+echo "   " >> $indexfile
+for eachfile in $tutorialsarray
+do
+   echo "   tutorials/$eachfile/$eachfile" >> $indexfile
+done
+echo "   " >> $indexfile
+
+## Update sources
+sourcefolder="$repo_path/docs/source/"
 
 filenamesarray=`ls $sourcefolder`
 
 sed -i '/Application list/,$d' $indexfile
+echo ".. toctree::" >> $indexfile
 echo "   :caption: Application list" >> $indexfile
 echo "   :maxdepth: 3" >> $indexfile
 echo "   :titlesonly:" >> $indexfile

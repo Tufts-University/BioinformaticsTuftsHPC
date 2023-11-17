@@ -7,17 +7,14 @@ This is the user guide for running  bioinformatics analysis on `Tufts High Perfo
 If you have any question, contact me (`Yucheng Zhang <mailto:yzhang85@tufts.edu>`_). 
 
 .. toctree::
-   :caption: Frequently Asked Questions
+   :caption: Tutorials
+   :maxdepth: 3
    :titlesonly:
-
-   faq
-
-.. toctree::
-   :caption: Singularity
-   :titlesonly:
-
-   singularity
-
+   
+   tutorials/chipseq/chipseq
+   tutorials/rnaseq/rnaseq
+   tutorials/scrnaseq/scrnaseq
+   
 .. toctree::
    :caption: Application list
    :maxdepth: 3
