@@ -16,7 +16,7 @@ If you have any question, contact me (`Yucheng Zhang <mailto:yzhang85@tufts.edu>
    tutorials/scrnaseq/scrnaseq
    
 .. toctree::
-   :caption: Application list
+   :caption: Bioinformatics applications
    :maxdepth: 3
    :titlesonly:
    
