@@ -42,3 +42,5 @@ To run cellranger on our clusters::
 
  module purge
  module load cellranger/XXXX ### you can run *module avail cellranger* to check all available versions
+
+ cellranger count --id=run_count_1kpbmcs --fastqs=pbmc_1k_v3_fastqs --sample=pbmc_1k_v3 --transcriptome=refdata-gex-GRCh38-2020-A

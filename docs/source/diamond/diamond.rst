@@ -42,3 +42,6 @@ To run diamond on our clusters::
 
  module purge
  module load diamond/XXXX ### you can run *module avail diamond* to check all available versions
+
+ diamond makedb  --in uniprot_sprot.fasta -d uniprot_sprot
+ diamond blastp -p 24 -q test.faa -d uniprot_sprot  --very-sensitive -o blastp_output.txt

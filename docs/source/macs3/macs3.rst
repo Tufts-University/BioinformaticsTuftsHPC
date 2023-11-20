@@ -41,3 +41,5 @@ To run macs3 on our clusters::
 
  module purge
  module load macs3/XXXX ### you can run *module avail macs3* to check all available versions
+
+ macs3 callpeak -t ChIP.bam -c Control.bam -f BAM -g hs -n test -B -q 0.01

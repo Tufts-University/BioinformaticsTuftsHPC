@@ -42,3 +42,5 @@ To run plink on our clusters::
 
  module purge
  module load plink/XXXX ### you can run *module avail plink* to check all available versions
+
+ plink --file toy --freq --out toy_analysis

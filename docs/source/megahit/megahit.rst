@@ -41,3 +41,5 @@ To run megahit on our clusters::
 
  module purge
  module load megahit/XXXX ### you can run *module avail megahit* to check all available versions
+
+ megahit --12 SRR1976948.abundtrim.subset.pe.fq.gz,SRR1977249.abundtrim.subset.pe.fq.gz -o combined

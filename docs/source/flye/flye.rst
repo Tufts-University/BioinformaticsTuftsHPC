@@ -43,3 +43,6 @@ To run flye on our clusters::
 
  module purge
  module load flye/XXXX ### you can run *module avail flye* to check all available versions
+
+ flye --pacbio-raw E.coli_PacBio_40x.fasta --out-dir out_pacbio --threads 12
+ flye --nano-raw Loman_E.coli_MAP006-1_2D_50x.fasta --out-dir out_nano --threads 12

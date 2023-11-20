@@ -41,3 +41,5 @@ To run orthofinder on our clusters::
 
  module purge
  module load orthofinder/XXXX ### you can run *module avail orthofinder* to check all available versions
+
+ orthofinder -t 4 -f InputData -o output

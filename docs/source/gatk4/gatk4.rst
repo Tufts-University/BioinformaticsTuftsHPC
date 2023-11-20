@@ -42,3 +42,7 @@ To run gatk4 on our clusters::
 
  module purge
  module load gatk4/XXXX ### you can run *module avail gatk4* to check all available versions
+
+ gatk --java-options "-Xmx12G -XX:ParallelGCThreads=24" HaplotypeCaller \
+      -R hg38.fa -I 19P0126636WES.sorted.bam \
+      -O 19P0126636WES.HC.vcf --sample-name 19P0126636

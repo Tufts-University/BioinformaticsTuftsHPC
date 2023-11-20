@@ -42,3 +42,7 @@ To run picard on our clusters::
 
  module purge
  module load picard/XXXX ### you can run *module avail picard* to check all available versions
+
+ picard MarkDuplicates -Xmx64g I=19P0126636WES_sorted.bam O=19P0126636WES_sorted_md.bam M=19P0126636WES.sorted.markdup.txt REMOVE_DUPLICATES=true
+ picard BuildBamIndex -Xmx64g I=19P0126636WES_sorted_md.bam
+ picard CreateSequenceDictionary -R hg38.fa -O hg38.dict

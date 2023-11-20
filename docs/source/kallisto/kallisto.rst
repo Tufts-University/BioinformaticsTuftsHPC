@@ -42,3 +42,6 @@ To run kallisto on our clusters::
 
  module purge
  module load kallisto/XXXX ### you can run *module avail kallisto* to check all available versions
+
+ kallisto index -i transcripts.idx Homo_sapiens.GRCh38.cds.all.fa.gz
+ kallisto quant -t 24 -i transcripts.idx -o output -b 100  SRR11614709_1.fastq  SRR11614709_2.fastq

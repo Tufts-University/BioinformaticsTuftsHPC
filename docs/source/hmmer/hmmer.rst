@@ -83,3 +83,5 @@ To run hmmer on our clusters::
 
  module purge
  module load hmmer/XXXX ### you can run *module avail hmmer* to check all available versions
+
+ hmmsearch Nramp.hmm protein.fa > out

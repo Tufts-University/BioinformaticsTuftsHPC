@@ -41,3 +41,5 @@ To run minipolish on our clusters::
 
  module purge
  module load minipolish/XXXX ### you can run *module avail minipolish* to check all available versions
+
+ minipolish -t 8 long_reads.fastq.gz assembly.gfa > polished.gfa

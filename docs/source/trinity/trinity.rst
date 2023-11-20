@@ -69,8 +69,8 @@ To run trinity on our clusters::
  #SBATCH -t 1:00:00
  #SBATCH -N 1
  #SBATCH -n 1
- #SBATCH -c 4
- #SBATCH --mem=8G
+ #SBATCH -c 10
+ #SBATCH --mem=20G
  #SBATCH --job-name=trinity
  #SBATCH --mail-type=FAIL,BEGIN,END
  #SBATCH --error=%x-%J-%u.err
@@ -78,3 +78,6 @@ To run trinity on our clusters::
 
  module purge
  module load trinity/XXXX ### you can run *module avail trinity* to check all available versions
+
+ Trinity --seqType fq --left reads_1.fq --right reads_2.fq \
+        --CPU 10 --max_memory 20G

@@ -42,3 +42,6 @@ To run salmon on our clusters::
 
  module purge
  module load salmon/XXXX ### you can run *module avail salmon* to check all available versions
+
+ salmon index -t  Homo_sapiens.GRCh38.cds.all.fa -i salmon_index
+ salmon quant -i salmon_index -l A -p 24 -1 SRR16956239_1.fastq -2 SRR16956239_2.fastq --validateMappings -o transcripts_quan

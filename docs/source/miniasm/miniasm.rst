@@ -42,3 +42,6 @@ To run miniasm on our clusters::
 
  module purge
  module load miniasm/XXXX ### you can run *module avail miniasm* to check all available versions
+
+ miniasm -f Elysia_ont_test.fq  Elysia_reads.paf.gz \
+         > Elysia_reads.gfa

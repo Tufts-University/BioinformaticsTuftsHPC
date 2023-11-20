@@ -57,3 +57,5 @@ To run subread on our clusters::
 
  module purge
  module load subread/XXXX ### you can run *module avail subread* to check all available versions
+
+ featureCounts -s 2 -p -Q 10 -T 4 -a genome.gtf -o featurecounts.txt mapped.bam

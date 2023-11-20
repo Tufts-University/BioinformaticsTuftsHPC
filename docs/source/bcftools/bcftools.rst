@@ -49,3 +49,9 @@ To run bcftools on our clusters::
 
  module purge
  module load bcftools/XXXX ### you can run *module avail bcftools* to check all available versions
+ 
+ bcftools query -f '%CHROM %POS %REF %ALT\n' file.bcf
+ bcftools polysomy -v -o outdir/ file.vcf
+
+ # Variant calling
+ bcftools mpileup -f reference.fa alignments.bam | bcftools call -mv -Ob -o calls.bcf

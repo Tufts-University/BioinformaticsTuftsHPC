@@ -43,3 +43,8 @@ To run trycycler on our clusters::
 
  module purge
  module load trycycler/XXXX ### you can run *module avail trycycler* to check all available versions
+
+ trycycler cluster --assemblies \
+        test/test_cluster/assembly_*.fasta \
+        --read test/test_cluster/reads.fastq \
+        --out_dir trycycler_out

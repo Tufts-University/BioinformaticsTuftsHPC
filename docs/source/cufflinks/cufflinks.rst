@@ -48,3 +48,5 @@ To run cufflinks on our clusters::
 
  module purge
  module load cufflinks/XXXX ### you can run *module avail cufflinks* to check all available versions
+
+ cufflinks -p 8 -G transcript.gtf --library-type fr-unstranded -o cufflinks_output tophat_out/accepted_hits.bam

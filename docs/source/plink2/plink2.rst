@@ -41,3 +41,5 @@ To run plink2 on our clusters::
 
  module purge
  module load plink2/XXXX ### you can run *module avail plink2* to check all available versions
+ 
+ plink2 --bfile HapMap_3_r3_1 --freq --out HapMap_3_r3_1_out

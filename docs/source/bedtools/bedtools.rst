@@ -79,3 +79,6 @@ To run bedtools on our clusters::
 
  module purge
  module load bedtools/XXXX ### you can run *module avail bedtools* to check all available versions
+
+ bedtools intersect -a a.bed -b b.bed
+ bedtools annotate -i variants.bed -files genes.bed conserve.bed known_var.bed

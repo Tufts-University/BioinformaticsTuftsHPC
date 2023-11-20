@@ -42,3 +42,10 @@ To run cellranger-atac on our clusters::
 
  module purge
  module load cellranger-atac/XXXX ### you can run *module avail cellranger-atac* to check all available versions
+
+ cellranger-atac count --id=sample345 \
+                       --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 \
+                       --fastqs=runs/HAWT7ADXX/outs/fastq_path \
+                       --sample=mysample \
+                       --localcores=8 \
+                       --localmem=64

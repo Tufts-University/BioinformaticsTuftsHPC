@@ -55,3 +55,5 @@ To run fasta3 on our clusters::
 
  module purge
  module load fasta3/XXXX ### you can run *module avail fasta3* to check all available versions
+
+ fasta36 input.fasta genome.fasta

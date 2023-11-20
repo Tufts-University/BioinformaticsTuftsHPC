@@ -41,3 +41,5 @@ To run fastp on our clusters::
 
  module purge
  module load fastp/XXXX ### you can run *module avail fastp* to check all available versions
+
+ fastp -i input_1.fastq  -I input_2.fastq -o out.R1.fq.gz -O out.R2.fq.gz

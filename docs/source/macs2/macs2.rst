@@ -41,3 +41,5 @@ To run macs2 on our clusters::
 
  module purge
  module load macs2/XXXX ### you can run *module avail macs2* to check all available versions
+ 
+ macs2 callpeak -t ChIP.bam -c Control.bam -f BAM -g hs -n test -B -q 0.01

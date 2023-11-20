@@ -47,3 +47,8 @@ To run qiime2 on our clusters::
 
  module purge
  module load qiime2/XXXX ### you can run *module avail qiime2* to check all available versions
+
+ qiime metadata tabulate \
+        --m-input-file rep-seqs.qza \
+        --m-input-file taxonomy.qza \
+        --o-visualization tabulated-feature-metadata.qzv

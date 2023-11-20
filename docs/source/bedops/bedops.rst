@@ -205,3 +205,7 @@ To run bedops on our clusters::
 
  module purge
  module load bedops/XXXX ### you can run *module avail bedops* to check all available versions
+
+ bedops -m 001.merge.001.test > 001.merge.001.observed
+ bedops -c 001.merge.001.test > 001.complement.001.observed
+ bedops -i 001.intersection.001a.test 001.intersection.001b.test > 001.intersection.001.observed

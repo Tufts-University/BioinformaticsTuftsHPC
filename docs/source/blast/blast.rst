@@ -68,3 +68,5 @@ To run blast on our clusters::
 
  module purge
  module load blast/XXXX ### you can run *module avail blast* to check all available versions
+
+ blastp -query protein.fasta -db nr -out test_out -num_threads 4

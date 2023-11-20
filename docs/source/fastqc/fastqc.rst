@@ -41,3 +41,5 @@ To run fastqc on our clusters::
 
  module purge
  module load fastqc/XXXX ### you can run *module avail fastqc* to check all available versions
+
+ fastqc -o fastqc_out -t 4 FASTQ1 FASTQ2

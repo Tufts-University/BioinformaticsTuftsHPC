@@ -42,3 +42,5 @@ To run trim-galore on our clusters::
 
  module purge
  module load trim-galore/XXXX ### you can run *module avail trim-galore* to check all available versions
+
+ trim_galore --paired --fastqc --length 20 -o sample1_trimmed Sample1_1.fq Sample1_2.fq

@@ -42,3 +42,5 @@ To run canu on our clusters::
 
  module purge
  module load canu/XXXX ### you can run *module avail canu* to check all available versions
+
+ canu -p Cm -d clavibacter_pacbio genomeSize=3.4m  -pacbio *.fastq

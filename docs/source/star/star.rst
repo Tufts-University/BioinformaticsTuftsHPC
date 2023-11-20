@@ -35,8 +35,7 @@ To run star on our clusters::
  #SBATCH -t 1:00:00
  #SBATCH -N 1
  #SBATCH -n 1
- #SBATCH -c 4
- #SBATCH --mem=8G
+ #SBATCH -c 24
  #SBATCH --job-name=star
  #SBATCH --mail-type=FAIL,BEGIN,END
  #SBATCH --error=%x-%J-%u.err
@@ -44,3 +43,7 @@ To run star on our clusters::
 
  module purge
  module load star/XXXX ### you can run *module avail star* to check all available versions
+
+ STAR  --runThreadN 24  --runMode genomeGenerate  --genomeDir ref_genome  --genomeFastaFiles ref_genome.fasta
+
+ STAR --runThreadN 24 --genomeDir ref_genome --readFilesIn seq_1.fastq seq_2.fastq  --outSAMtype BAM SortedByCoordinate --outWigType wiggle read2

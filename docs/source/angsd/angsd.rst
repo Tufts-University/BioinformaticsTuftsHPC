@@ -44,4 +44,7 @@ To run angsd on our clusters::
  #SBATCH --output=%x-%J-%u.out
 
  module purge
- module load angsd/XXXX ### you can run *module avail angsd* to check all available versions
+ module load angsd/XXXX ### you can run module avail angsd to check all available versions
+
+ angsd -b bam.filelist -GL 1 -doMajorMinor 1 -doMaf 2 -P 5 -minMapQ 30 -minQ 20 -minMaf 0.05
+

@@ -64,3 +64,5 @@ To run spades on our clusters::
 
  module purge
  module load spades/XXXX ### you can run *module avail spades* to check all available versions
+
+ spades.py --pe1-1 SRR11234553_1.fastq --pe1-2 SRR11234553_2.fastq -o spades_out -t 4

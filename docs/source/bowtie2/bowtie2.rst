@@ -44,3 +44,6 @@ To run bowtie2 on our clusters::
 
  module purge
  module load bowtie2/XXXX ### you can run *module avail bowtie2* to check all available versions
+
+ bowtie2-build ref.fasta ref
+ bowtie2 -p 4 -x ref -1 input_1.fq -2 input_2.fq -S test.sam

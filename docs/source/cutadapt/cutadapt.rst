@@ -42,3 +42,5 @@ To run cutadapt on our clusters::
 
  module purge
  module load cutadapt/XXXX ### you can run *module avail cutadapt* to check all available versions
+
+ cutadapt -a AACCGGTT -o output.fastq input.fastq
