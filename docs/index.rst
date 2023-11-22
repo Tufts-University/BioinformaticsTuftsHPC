@@ -8,7 +8,7 @@ If you have any question, contact me (`Yucheng Zhang <mailto:yzhang85@tufts.edu>
 
 .. toctree::
    :caption: Tutorials
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
    
    tutorials/16s/00.overview
