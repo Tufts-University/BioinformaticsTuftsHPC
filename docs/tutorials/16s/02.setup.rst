@@ -1,7 +1,5 @@
-!!! example “Prerequisites” - `Request an
-account <http://research.uit.tufts.edu/>`__ on the Tufts HPC Cluster -
-Connect to the `VPN <https://access.tufts.edu/vpn>`__ if off campus
-
+Setup
+==========================
 Navigate To The Cluster
 -----------------------
 

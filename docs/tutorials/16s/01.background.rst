@@ -11,8 +11,7 @@ Introduction to the Microbiome
 |image1|
 
 Microbiome Variability
-~~~~~~~~~~~~~~~~~~~~~~
-
+--------------------
 -  Assessing a microbiome disturbance is not a trivial task as it is
    highly variable from person to person.
 -  Large sample sizes, hundreds of patients, are needed to overcome
@@ -21,7 +20,7 @@ Microbiome Variability
 |image2|
 
 Sample Collection
-~~~~~~~~~~~~~~~~~
+--------------------
 
 -  Sample collection is also a difficult challenge and highly dependent
    on the study question.
@@ -35,7 +34,7 @@ Sample Collection
 |image3|
 
 Confounding Factors
-~~~~~~~~~~~~~~~~~~~
+--------------------
 
 -  When conducting a clinical experiment, it is pertinent to stratify
    accounting for age, gender, diet, etc.
@@ -55,8 +54,7 @@ What is an Amplicon?
 |image5|
 
 Why Sequence One Gene?
-~~~~~~~~~~~~~~~~~~~~~~
-
+--------------------
 -  Genes can vary per organism and may not be well conserved across
    species. To assess the microbial community composition, we need to
    sequence a conserved gene across organisms of interest:

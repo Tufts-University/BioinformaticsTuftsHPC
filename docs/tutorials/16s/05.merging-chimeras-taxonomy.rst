@@ -1,3 +1,5 @@
+Merging, Chimeras & Taxonomy
+==============================
 Merging Reads
 -------------
 

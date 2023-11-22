@@ -2,7 +2,7 @@ Introduction to 16S Metabarcoding
 =============================
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Sections:
 
    01.background.rst

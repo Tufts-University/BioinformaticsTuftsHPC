@@ -1,3 +1,5 @@
+Quality Control
+==========================
 Sequencing Overview
 -------------------
 
