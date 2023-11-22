@@ -116,8 +116,9 @@ analysis!
 
 Other 16S Analysis Methods
 ----------------------
-- `USEARCH <https://drive5.com/usearch/>`__ -
-- `Mothur <https://mothur.org/>`__ - `QIIME <http://qiime.org/>`__
+- `USEARCH <https://drive5.com/usearch/>`__
+- `Mothur <https://mothur.org/>`__ 
+- `QIIME <http://qiime.org/>`__
 
 .. |image1| image:: images/microbiome.png
 .. |image2| image:: images/variability.png
