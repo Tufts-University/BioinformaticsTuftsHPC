@@ -114,9 +114,10 @@ Modified from Liu et al. Protein & Cell (2021)
 Today we will be using the DADA2 method to perform our amplicon data
 analysis!
 
-??? tip “Other 16S Analysis Methods” -
-`USEARCH <https://drive5.com/usearch/>`__ -
-`Mothur <https://mothur.org/>`__ - `QIIME <http://qiime.org/>`__
+Other 16S Analysis Methods
+----------------------
+- `USEARCH <https://drive5.com/usearch/>`__ -
+- `Mothur <https://mothur.org/>`__ - `QIIME <http://qiime.org/>`__
 
 .. |image1| image:: images/microbiome.png
 .. |image2| image:: images/variability.png
