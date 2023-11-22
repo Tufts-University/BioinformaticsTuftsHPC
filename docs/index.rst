@@ -11,6 +11,7 @@ If you have any question, contact me (`Yucheng Zhang <mailto:yzhang85@tufts.edu>
    :maxdepth: 3
    :titlesonly:
    
+   tutorials/16s/00.overview
    tutorials/chipseq/chipseq
    tutorials/rnaseq/rnaseq
    tutorials/scrnaseq/scrnaseq

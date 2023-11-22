@@ -1,0 +1,14 @@
+Introduction to 16S Metabarcoding
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Sections:
+
+   01.background.rst
+   02.setup.rst
+   03.quality-control.rst
+   04.error-asv.rst
+   05.merging-chimeras-taxonomy.rst
+   06.diversity-analysis.rst
+   07.differential-abundance.rst
