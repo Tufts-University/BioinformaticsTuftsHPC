@@ -59,7 +59,7 @@ Differential Abundance measures which taxa are differentially abundant
 between conditions. So how does it work:
 
 DESeq2 Normalization:
-~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 1. Geometric mean per ASV
 2. Divide rows by geometric mean
@@ -77,7 +77,7 @@ DESeq2 Normalization:
    </figure>
 
 DESeq2 Model
-~~~~~~~~~~~~
+----------------------
 
 1. The normalized abundances of an ASV are plotted against two
    conditions
@@ -95,7 +95,7 @@ DESeq2 Model
    </figure>
 
 DESeq2 P-Value
-~~~~~~~~~~~~~~
+----------------------
 
 1. The Slope or 𝛽1 is used to calculate a Wald Test Statistic 𝑍
 2. This statistic is compared to a normal distribution to determine the
@@ -165,15 +165,8 @@ Now how do we do this in R?
    - Be sure that your data are not influenced by outliers!
    - Additionally, we collapsed our ASV's to the Phylum level since all ASV's had an identified phylum
 
-??? tip “Optional: How do I turn this R markdown into an R script?” -
-run the following code (being sure to change the path to where your
-script is): - ``knitr::purl("dada2pipeline.Rmd")`` - You should now find
-an R script called ``dada2pipeline.R``!
-
-!!! abstract “References”
-
-::
-
+References
+----------------------
    1. [Galaxy Project - Metagenomics](https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html)
    2. [Microbiome 101](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6391518/)
    3. [Current understanding of the human microbiome](https://www.nature.com/articles/nm.4517)

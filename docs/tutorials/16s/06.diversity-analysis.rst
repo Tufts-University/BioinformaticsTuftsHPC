@@ -187,9 +187,6 @@ We can plot this in R code:
 
 Here we note that the wild type and C57BL/6NTac cluster together.
 
-??? question “Which mouse line do you expect to be more spread on the
-Bray-Curtis Distance plot?” - Laboratory Mouse Line (C57BL/6NTac) - Wild
-Type (Mus musculus domesticus)
 
 .. |image1| image:: images/rarefaction.png
 .. |image2| image:: images/shannon-simpson.png
