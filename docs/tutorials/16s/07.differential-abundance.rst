@@ -156,10 +156,7 @@ Now how do we do this in R?
 
 |image6|
 
-!!! example “Explanation of Results”
-
-::
-
+.. admonition:: Explanation of Results
    - Wild type seem to have an abundance of Campylobacteria and the C57BL/6NTac have an abundance of Bacteriodota
    - Proteobacteria are severely downregulated in our C57BL/6NTac mice. However, they only show up in one sample!
    - Be sure that your data are not influenced by outliers!
