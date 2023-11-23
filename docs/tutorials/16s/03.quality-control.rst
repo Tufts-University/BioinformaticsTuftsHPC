@@ -49,11 +49,9 @@ Quality Scores
 DADA2 Quality Control
 ---------------------
 
-!!! warning DADA2 assumes that your read data has had any adapters
-removed and that your data is demultiplexed! Check out
-`sabre <https://github.com/najoshi/sabre>`__ to demultiplex your samples
-and `Cutadapt <https://cutadapt.readthedocs.io/en/stable/>`__ to remove
-adapters
+.. warning::
+
+  DADA2 assumes that your read data has had any adapters removed and that your data is demultiplexed! Check out `sabre <https://github.com/najoshi/sabre>`_ to demultiplex your samples and `Cutadapt <https://cutadapt.readthedocs.io/en/stable/>`_ to remove adapters.
 
 We begin by specifying the path to our data, sorting by forward and
 reverse strands, and grabbing our sample names:
@@ -104,16 +102,12 @@ fastq files:
 
 |image5|
 
-!!! info “What does the graph tell us?”
-
-::
+.. admonition:: What does the graph tell us?
 
    - Here we see that the quality scores drop off around the 200th base position for the forward reads and the 150th base position for the reverse reads
    - The error rate is considered when determining true biological sequences but is more sensitive to rare biological senquences when reads are trimmed.
 
-!!! danger “Trimming Considerations”
-
-::
+.. admonition:: Trimming Considerations
 
    - The data we are using are 2x250 V4 sequence data. For data that do not overlap as much (i.e. data from the V1-V2 or V3-V4 regions), be wary that this may affect how the reads are merged later on. 
 
@@ -149,18 +143,13 @@ DADA2 filters:
 
 .. admonition:: What do these options mean?
 
-  #. ``truncLen``: truncate reads after this base
-   * Here we truncate after base 200 for the forward reads and after basae 150 for the reverse reads 
-  #. ``maxN``: After truncation,sequences with more than maxN Ns will be discarded. Note that dada does
-not allow Ns.
-  #. ``maxEE``: After truncation, reads with higher than maxEE “expected errors” will be discarded. 
-  #. ``truncQ``: Truncate reads at the first instance of a quality score less than or equal to
+  * ``truncLen``: truncate reads after this base (Here we truncate after base 200 for the forward reads and after basae 150 for the reverse reads.).
+  * ``maxN``: After truncation,sequences with more than maxN Ns will be discarded. Note that dada does not allow Ns.
+  * ``maxEE``: After truncation, reads with higher than maxEE “expected errors” will be discarded. 
+  * ``truncQ``: Truncate reads at the first instance of a quality score less than or equal to
 ``truncQ``
-  #. ``rm.phix``: If TRUE, discard reads that match against the phiX genome 
-   * Illumina control libraries derived from a PhiX genome, are used to reduce ambiguity in base calls when highly repetitive sequences
-are generated. It is pertinent to remove reads mapping to the PhiX genome to ensure you are assessing your microbial community and not the
-Illumina control run. 
-  #. ``compress``: If TRUE, the output fastq file(s) are gzipped
+  * ``rm.phix``: If TRUE, discard reads that match against the phiX genome (Illumina control libraries derived from a PhiX genome, are used to reduce ambiguity in base calls when highly repetitive sequences are generated. It is pertinent to remove reads mapping to the PhiX genome to ensure you are assessing your microbial community and not the Illumina control run.). 
+  * ``compress``: If TRUE, the output fastq file(s) are gzipped.
 
 .. |image1| image:: images/sequencing2.jpeg
 .. |image2| image:: images/read-data.png

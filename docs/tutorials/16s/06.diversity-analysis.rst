@@ -8,12 +8,11 @@ construct our tree we will be first aligning our ASV’s using ClustalW
 and then constructing a phylogenetic tree via the neighborhood joining
 method.
 
-!!! info “To learn more about ClustalW and the neighborhood joining
-method visit:” - `Clustal W and Clustal X version
-2.0 <https://academic.oup.com/bioinformatics/article/23/21/2947/371686?login=true>`__
-- `The neighbor-joining method: a new method for reconstructing
-phylogenetic
-trees. <https://academic.oup.com/mbe/article/4/4/406/1029664?login=true>`__
+.. note::
+
+ To learn more about ClustalW and the neighborhood joining method visit: 
+ - `Clustal W and Clustal X version 2.0 <https://academic.oup.com/bioinformatics/article/23/21/2947/371686?login=true>`_
+ - `The neighbor-joining method: a new method for reconstructing phylogenetic trees. <https://academic.oup.com/mbe/article/4/4/406/1029664?login=true>`_
 
 Let’s work this in R!
 
